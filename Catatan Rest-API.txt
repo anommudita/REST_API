@@ -1,0 +1,76 @@
+
+Pertemuan #3 Apa itu JSON
+JSON (javaScript Object Notation) adalah sebuah file format standar yang menggunakan tulisan yang dapat dibaca oleh manusia untuk
+pertukaran data, yang di dalamnya berisi pasangan antara Key dan Value. Seperti Array Assosiative diPHP dan Object di javaScript
+
+JSON 
+- format pertukaran data texstual yang sangat ringan 
+- Sintaksnya sangat sederhana dan jelas (dibandingkan XML)
+- Dapat digunakan pada beragam bahasa pemrograman ==> gambang bro pakai bahasa apa saja support kok!
+- Tiap bahasa pemrograman memiliki cara tersendiri untuk berinteraksi dengan JSON
+- Dibuat berdasarkan format Object pada javaScript ==> Pelajarin Fundamental javaScript!
+- Digunakan juga untuk file konfigurasi(sering digunakan di framework 
+tidak disarankan karena memiliki 1 kekurangan yaitu tidak bisa menggunakan sintaks komentar) ==> penting sintaks comment pada konfigurasi!
+- Tipe File JSON memiliki ekstensi .JSON
+- Format JSON dibuat dan diusulkan oleh Douglas Crockford(Jagoan javaScript)
+
+
+JSON VS XML
+Sebelumnya format terpopuler adalah XML, ayo kita bandingkan dengan javaScript
+- Format JSON seperti Object pada javaScript dan Format XML lebih duplikatif seperti TAG HTML
+
+Object
+Object pada javascript adalah kumpulan property, dan property ditulis dalam bentuk pasangan antara key dan Value
+contoh Object Literal :
+
+var Orang = {
+    nama  : 'Ida Bagus Anom Mudita', ==> property
+    umur : 21, ==> property
+    pekerjaaan : 'Arsitek Teknikal', ==> property
+    sapa :function () { ==> nilai pada key bisa menggunkaan method 
+        return 'Hi , nama saya '+ this.nama + ' usia saya ' + this.umur + ' tahun, dan saya adalah seorang ' + this.pekerjaan;
+    } 
+}
+di JSON tidak memiliki method pada nilai value-nya dan jika di Javascript bisa menerapkan method sebagai value-nya!
+
+JSON cara membuat Object dan aturan membuat property
+
+{
+    "nama" : "Ida Bagus Anom Mudita",
+    "umur" : 21,
+    "pekerjaan" : "Arsitek Teknikal" 
+}
+
+"key" : value 
+
+Tipe Data dari value pada JSON
+- Boolean = true atau false,
+- Array = ["value1", "Value2", "Value3", ...] isi nilainya bebas bisa number, string, Boolean, bahkan obejct 
+- String = teks / unicode, dibungkus menggunakan ""
+- Object = { "key" : "value"}
+- Number = interger atau float
+- Null = null
+Biar Gampang jadi BASONN agar mudah mengingatnya!
+
+
+Bekerja Dengan JSON
+ - Method Di PHP 
+ json_encode() = Array atau Object diubah menjadi JSON
+ json-decode() = JSON diubah menjadi Array atau Object
+- Mengakses JSON ditempat lain atau diluar bro seperti harga pizza hut 
+file_get_contents()
+
+
+ - Method Di Javascript
+JSON.stringify()  ==> seperti json_encode == Object ke JSON
+JSON.parse()   ==> seperti json_decode == JSON ke Object
+- Mengakses JSON
+AJAX
+    - XMLHttpRequest
+    - JQuery atau vanila javaScript ==> download jquey uncompress dan jangan pilih slim karena tidak ada ajax-nya 
+    dengan hanya menggunakan 1 function saja, the best lah jquey
+
+action 
+1. Membuat file coba.json
+1. Cara Akses rest-api(coba.json) di PHP
+2. Cara Akses rest-api(coba.json) di Javascript

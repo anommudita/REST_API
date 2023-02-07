@@ -1,0 +1,24 @@
+[
+    {
+    "nama" : "Ida Bagus Anom Mudita",
+    "umur" : 21,
+    "nim" : "2015051038",
+    "lulus" : true,
+    "hobby" : ["coding", "gaming", "olahraga"],
+    "pembimbing" : {
+        "pembimbing1" : "Pak Jude",
+        "pembimbing2" : "Pak Edy"
+    }
+},
+{
+    "nama" : "Ida Bagus Anom Mudita",
+    "umur" : 21,
+    "nim" : "2015051038",
+    "lulus" : true,
+    "hobby" : ["coding", "gaming", "olahraga"],
+    "pembimbing" : {
+        "pembimbing1" : "Pak Jude",
+        "pembimbing2" : "Pak Edy"
+    }
+}
+]

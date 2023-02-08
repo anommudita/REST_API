@@ -66,11 +66,41 @@ JSON.stringify()  ==> seperti json_encode == Object ke JSON
 JSON.parse()   ==> seperti json_decode == JSON ke Object
 - Mengakses JSON
 AJAX
-    - XMLHttpRequest
-    - JQuery atau vanila javaScript ==> download jquey uncompress dan jangan pilih slim karena tidak ada ajax-nya 
+    - XMLHttpRequest atau vanila javaScript
+    - JQuery  ==> download jquey uncompress dan jangan pilih slim karena tidak ada ajax-nya 
     dengan hanya menggunakan 1 function saja, the best lah jquey
 
 action 
 1. Membuat file coba.json
 1. Cara Akses rest-api(coba.json) di PHP
 2. Cara Akses rest-api(coba.json) di Javascript
+
+
+Pertemuan #4 BEKERJA DENGAN JSON
+pizza.json sudah ada menu pizza hut, nama key yaitu "menu" dan value-nya berbentuk array yang berisikan object"
+
+Same-origin Policy : 
+- Kebijakan browser untuk Mengakses dan menampilkan data / script/ document dari tempat diluar domain-nya
+- Membuat kita tidak bisa Mengakses data(.json) dari luar domain/website
+- jika kita memiliki rest server jika tidak dijinkan maka kita tidak akan bisa sharing, karena ada CORS dan solusi harus konfigurasi 
+terlebih dahulu CORS-nya
+
+CORS (Cross Origin Resourse Sharing)
+- Mekanisme yang membuat kita dapat Mengakses sebuah Resourse(data, document, script) dari domain lain
+- Caranya adalah dengan membuat server memperbolehkan adanya akses data dari luar domain
+- Modifikasi Access-Control-Allow-Origin
+- Membuat file .httaccess , berikut codenya!
+
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+</IfModule>
+
+- atau dengan menggunakan teknik JSONP atau JSON with Pading
+
+
+
+
+action :
+1. Implementasi menggunakan PHP
+2. Implementasi menggunkaan Javascript
+

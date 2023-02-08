@@ -1,6 +1,6 @@
 <?php
 
-// mengambil database menggunakan rest-API
+// mengambil database menggunakan rest-API ==> database phpdasar!
 $dbh = new PDO('mysql:host=localhost;dbname=phpdasar', 'root', '');
 
 

@@ -97,10 +97,32 @@ CORS (Cross Origin Resourse Sharing)
 
 - atau dengan menggunakan teknik JSONP atau JSON with Pading
 
-
-
-
 action :
 1. Implementasi menggunakan PHP
 2. Implementasi menggunkaan Javascript
 
+
+
+Pertemuan #5 Apa itu Public API atau OPEN API
+
+Terhubung dengan Public API yang dimiliki oleh orang lain, tetapi sama saja dengan pertemuan sebelumnya dengan menggunakan file .json
+yang sudah digenerate oleh Public API
+
+Sebuah API(REST API) yang dapat diakses secara public, yang di dalamnya tersedia aturan untuk developer agar dapat mengakses data.
+
+
+Public API 
+- https://any-api.com
+- https://github.com/toddmotto/public-apis
+- https://github.com/farizdotid
+
+Jika kita memilih API kita harus memperhatikan Otentikasi-nya (Auth)
+- Tanpa Otentikasi = Terhubung dengan bebas dan kita harus juga memperhatikan Resourse dari Rest Server-nya
+- Key / Token = Untuk mengakses ke API orang lain, contohnya dengan cara login misalnya dan biasanya diberikan batasan req 1000/hari 
+jika ingin req lebih maka API tersebut memberikan layanan berbayar
+- OAuth = login dengan menggunakan facebook , gmail dll
+- Aturan CORS ada didokumentasinya
+
+
+action :
+siapkan aplikasi postman untuk melihat apakah berhasil kita mengambil datanya atau tidak.

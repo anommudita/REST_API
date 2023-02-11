@@ -180,3 +180,44 @@ luar CI#3
 8. Membuat endpoint atau request method get,post,put, delete data (dengan kondisi)
 9. Membuat class mahaiswa ==> tertera code dan comment
 10. Membuat model di folder model dan diberikan nama  Mahasiswa_model yang ada code query builder sql
+
+
+Pertemuan_8 REST API Autentikasi
+
+Authentication pada aplikasi kita bagaimana aplikasi nantinya tidak bisa diakses oleh sembarangan begitu saja, jadi kita membutuhkan
+sebuah API KEY. Setelah sudah menggunakan API KEY kita akan membatasi penggunannya api-nya
+selain key kita menambahkan username dan password untuk Authentication-nya.
+
+Kita menggunakan library-nya hehe!
+
+
+action : 
+1. Buka File rest.php yang ada diconfig
+2. Baca Dokumentasinya disana dan cari REST API Key Table Name
+$config['rest_keys_table'] = 'keys'; ==> default nama tablenya keys jika kali ingin mengubahnya ganti saja value-nya
+3. Copy Rest Enable Key ke phpmyadmin untuk membuat table api-key-nya di database rest_server yang kita buat sebelumnya-nya
+4. $config['rest_enable_keys'] = false; ==> ubah menjadi true untuk mengaktifkan api-keynya
+5. $config['rest_key_name'] = 'X-API-KEY'; ==> nama key kalian, contoh untuk mengakses title apa parameternya agar title filmnya 
+mengembalikan nilainya!
+
+6. kita insert key-nya yang ada di table keys. mekanisme harus login terlebih dahulu dan verifiaksi akun sehingga key bisa digenerate
+dan disimpan di database secara otomatis.
+
+7. sekarang jika kita mengakses api harus sudah isi isi apikey-nya ==> X-API-KEY
+
+8. Mencoba feature limit, baca langsung dokumentasi REST ENABLE LImits
+- $config['rest_enable_limits'] = true; ==> beri nilai true
+- membuat table limits ==> copy dengan script query-nya
+- $this->methods['METHOD_NAME']['limit'] = [NUM_REQUESTS_PER_HOUR]; ==> copy dan paste di mahaiswa.php di constructor
+limitnya per method ==> get, post , delete, put limitnya perjam ya !
+
+9. Autentikasi lihat dokumentasinya bagian REST LOGIN
+  - $config['rest_auth'] = 'basic; ==> value ganti menjadi true sehingga feature Autentikasi aktif dan pilih menu basic login 
+  dipostman!
+  - $config['rest_valid_logins'] = ['admin' => '1234']; ==> data Autentikasi-nya kita buat secara manual terlebih dahulu ya 
+  - Pilih Authorization di postman lalu pilih Authorzation masukan username dan password
+  - $config['auth_source'] = ''; ==> beri nilai kosong agar tidak eror
+
+10. $config['rest_valid_logins'] = ['admin' => '1234', 'anommudita' => 'rahasiabanget123'];
+    - jika ingin menambahkan akunnya tambah saja dengan cara manual 
+    

@@ -13,6 +13,13 @@ class Mahasiswa extends RestController
         parent::__construct();
         // load terlebih dahulu model Mahasiswa_model
         $this->load->model('Mahasiswa_model', 'mahasiswa');
+
+        //  limit akses api
+        // perjam berapa kai aksesnya contoh disini saya memberikan 1000 hari dan per key ya !
+        $this->methods['index_get']['limit'] = 100;
+        $this->methods['index_post']['limit'] = 100;
+        $this->methods['index_delete']['limit'] = 100;
+        $this->methods['index_put']['limit'] = 100;
     }
 
     // index_get method adalah method untuk get semua data 

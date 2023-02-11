@@ -123,6 +123,60 @@ jika ingin req lebih maka API tersebut memberikan layanan berbayar
 - OAuth = login dengan menggunakan facebook , gmail dll
 - Aturan CORS ada didokumentasinya
 
-
 action :
-siapkan aplikasi postman untuk melihat apakah berhasil kita mengambil datanya atau tidak.
+1.siapkan aplikasi postman untuk melihat apakah berhasil kita mengambil datanya atau tidak.
+2. Menyoba cara mengambil data API menggunakan postman
+3. Membuat movie kaliuntu menggunakan data API 
+
+
+Pertemuan #6 Youtube & Instagram (Menggunakan cURL)
+
+API Client :
+1. file_get_contents() ==> bahasa PHP bisa juga konek ke API
+2. ajax ==> tidak aman karena setiap mengakses api akan terlihat kode apikey-nya di konsole ==> solusinya dengan cara beri aksen login atau OAuth
+3. cURL ==> bahasa di PHP
+
+
+Actions : 
+1. Menggunakan Tampilan Ngobar Bootstrap 4.0
+2. menampilkan jumlah subscriber dari youtube dan sosial media dari instagram
+3. lebih suka membaca dokumentasi hehe!
+
+
+Pertemuan 7 REST API SERVER Menggunakan CodeIgniter #3
+
+Di pertemuan ini kita akan membuat Restful API atau REST Server dengan bantuan framework Codeigniter, bisa juga membuat dengan framework
+lain dan menggunakan bahasa pemrograman yang lain
+
+Study kasus-nya mengelola data mahasiswa dan membuat rest api yang bisa terhubung dengan client yang bisa get, post, delete, dan put data
+itu endpoint-nya
+
+
+action : 
+1. Download dulu folder CI3 versi latest
+2. Sebelum menggunakan CI3 kita harus mengkonfigurasi dasar dulu!
+- folder config -> config.php ->  cari BASE_URL lalu ganti dengan menggunakan url dilocalhost
+- seperti ini $config['base_url'] = 'http://localhost/REST_API/pertemuan_7/CodeIgniter-3.1.13/';
+- hapus file index.php --> seperti ini $config['index_page'] = '';
+- membuat file httaccess didalam folder rootnya ==> buka  documentation CI lalu cari CodeIgniter URLs
+ isi code : 
+ RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [L]
+
+3. Buat database kalian ya, lalu config dengan cara seperti dibawah ini :
+ - buka autoload.php lalu berikan nilai database ==> $autoload['libraries'] = array('database');
+ - satu lagi ada di helper dan beri nilai url ==>  $autoload['helper'] = array('url');
+
+4. Buka database.php lalu berikan username dan nama database yang kalian akan hubungkan dengan ci#3. saya membuat Database dengan 
+mencopy sql dari webunpas di pertemuan 7 rest_server
+
+5. Membuat REST_API dengan menggunakan library dari chriskacerguis/codeigntier-restserver cari di github lalu download
+6. copy file rest.php yang ada divendor lalu paste di difolder config
+7 config bagian config.php yang ada difolder config ===> $config['composer_autoload'] = FCPATH . 'vendor/autoload.php', karena kita mengakses file yang ada 
+luar CI#3
+
+8. Membuat endpoint atau request method get,post,put, delete data (dengan kondisi)
+9. Membuat class mahaiswa ==> tertera code dan comment
+10. Membuat model di folder model dan diberikan nama  Mahasiswa_model yang ada code query builder sql

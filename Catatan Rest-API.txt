@@ -167,7 +167,7 @@ RewriteRule ^(.*)$ index.php/$1 [L]
 
 3. Buat database kalian ya, lalu config dengan cara seperti dibawah ini :
  - buka autoload.php lalu berikan nilai database ==> $autoload['libraries'] = array('database');
- - satu lagi ada di helper dan beri nilai url ==>  $autoload['helper'] = array('url');
+ - satu lagi ada di helper dan beri nilai url ==>  $autoload['helper'] = array('url'); ==> supaya aktif base_url
 
 4. Buka database.php lalu berikan username dan nama database yang kalian akan hubungkan dengan ci#3. saya membuat Database dengan 
 mencopy sql dari webunpas di pertemuan 7 rest_server
@@ -220,4 +220,23 @@ limitnya per method ==> get, post , delete, put limitnya perjam ya !
 
 10. $config['rest_valid_logins'] = ['admin' => '1234', 'anommudita' => 'rahasiabanget123'];
     - jika ingin menambahkan akunnya tambah saja dengan cara manual 
-    
+
+
+Pertemuan_9 Membuat REST CLIENT
+
+Membuat REST Client pada pertemuan ini dengan membuat aplikasi sederhana
+
+REST Client 
+- file_get_contents() ==> fungsi hanya bisa endpoint GET saja
+- AJAX  ==> fungsi hanya bisa endpoint GET saja
+- cURL  ==> fungsi bisa menggunkan beberapa endpoint GET,POST,PUT,DELETE
+
+Dipertemuan ini kita akan menggunakan library yang bernama Guzzle PHP
+Guzzle merupakan sebuah HTTP Client yang bisa request data dengan server dengan mudah lebih simple bro hehee!
+
+- Harus Paham CodeIgniter
+- Harus sudah install Composer karena untuk mengunduh library Guzzle
+
+Study Case-nya mengambil data seperti di pertemuan 5 namun menggunakan feature Guzzle
+1. Membuat file guzzle.php
+2. Download Library di Composer ==> ketikan perintah ini composer require guzzlehttp/guzzle:^7.0

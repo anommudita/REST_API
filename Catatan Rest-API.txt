@@ -232,11 +232,19 @@ REST Client
 - cURL  ==> fungsi bisa menggunkan beberapa endpoint GET,POST,PUT,DELETE
 
 Dipertemuan ini kita akan menggunakan library yang bernama Guzzle PHP
-Guzzle merupakan sebuah HTTP Client yang bisa request data dengan server dengan mudah lebih simple bro hehee!
+Guzzle merupakan sebuah HTTP Client yang bisa request data server dengan mudah lebih simple bro hehee!
 
-- Harus Paham CodeIgniter
+- Harus Paham CodeIgniter 3
 - Harus sudah install Composer karena untuk mengunduh library Guzzle
 
 Study Case-nya mengambil data seperti di pertemuan 5 namun menggunakan feature Guzzle
 1. Membuat file guzzle.php
 2. Download Library di Composer ==> ketikan perintah ini composer require guzzlehttp/guzzle:^7.0
+3. Mencoba guzzle di guzzle.php untuk mengambl data API OMDB (api data film)
+4. Mencopy sistem yang kita buat sebelumnya yang menggunakan framework Ci 3 (CRUD)
+5. Download Composer lalu atur config.php agar terhubung dengan guzzle
+$config['composer_autoload'] = FCPATH;
+apa isi FCPATH ??? var_dump(FCPATH); die;
+C:\xampp\htdocs\REST_API\rest_api_client\" isinya ini! (url utama bro!)
+6. Menghubungkan REST_API_SERVER dengan mengubah code didalam Mahasiswa_model.php
+(CRUD menggunakan API)

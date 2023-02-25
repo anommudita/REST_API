@@ -54,7 +54,34 @@ REST API
 - Hampi selalu menggunakan HTTP
 - Memungkinkan interaksi antar mesin
 
-nanti lanjut lagi bro
+Ada endpoint GET, POST, PUT , DELETE untuk mengirim request ke server dan server itu langsung memberi response ke client
+
+REST CLIENT => server ke client
+REST SERVER ==> interaksi server dan api
+
+Kode status
+200 - Success
+404 - Not Found
+500 - Server Error
+
+Kenapa butuh kode status?
+Karena kita sudah berinteraksi antar mesin
+Kode status (status code) pada API (Application Programming Interface) 
+sangat penting karena memberikan informasi tentang hasil permintaan (request) yang dilakukan oleh client ke server. 
+Kode status digunakan untuk memberikan respons HTTP (Hypertext Transfer Protocol) kepada client, yang memberikan 
+informasi tentang apakah permintaan berhasil atau tidak.
+
+RESTFUL itu merupakan teknik full CRUD dengan menggunakan restapi yang benar dan data tersebut dikirim dan diterima berupa json!
+- Menggunakan HTTP method  yang benar (GET, POST, DELETE, PUT)
+- URI / endpoints-ya menggunakankata benda, bukan kata kerja contoh http:ci-app/mahasiswa/hapus ==> ini salah samapai menyebutkan /mahasiswa saja bener
+- Stateless
+
+
+Stateless
+- Setiap request HTTP dilakukan secara terisolasi 
+- Server tidak menyimpan state apapun mengenai sesi dari client ==> REST API tidak boleh menyimpanan Sesion atau Cokies
+- Setiap request dari client harus berisi semua informasi yang dibutuhkan server, termasuk informasi ontentikasinya(loginya)
+
 
 
 Pertemuan #3 Apa itu JSON

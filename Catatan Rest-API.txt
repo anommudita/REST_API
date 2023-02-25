@@ -1,3 +1,61 @@
+Pertemuan 1  Apa itu pertemuan API ?
+Sebelum membuat rest-api kita harus mengetahui apa itu REST API?
+
+API(Application Programming Interface) ?
+- API adalah sekumpulan fungsi, subroutine, protokol komunikasi atau kakas/tools untuk membuat perangkat lunak
+- Antarmuka yang berupa kumpulan fungsi yang dapat dipanggil atau dijalankan oleh program lain
+- Penerapannya sangat luas
+  - Bahasa Pemrograman
+  - Library & Framework
+  - Sistem Operasi
+  - Web API / Web Service / REST API
+    "Sebuah sistem perangkat lunak yang dibuat untuk mendukung interoperabilitas / interaksi antara 2 aplikasi yang berbeda melalui jaringan."
+	SOAP (Simple Object Access Protokol)
+	REST (REpresentational State Transfer)
+
+
+Interface / antarmuka??
+Bagian yang sama antara dua atau lebih komponen terpisah pada sebuah sistem komputer(Motherboard Interface).
+memasang RAM di motherboard dan tidak mungkin salah slot karena sudah tersedia slotnya masing". Contoh lagi audio interface. tidak mungkin gitar kita langsung dimasukan ke komputer langsung, sehingga kita butuh audio interface.
+
+Apa yang akan kita pelajari?
+1. Apa itu REST API
+2. JSON ==> membuat & mengakses
+3. Public API
+   - simple / complex auth
+4. Membuat REST Server
+
+API Testing tools
+Postman
+Insomnia
+
+
+Pertemuan 2 REST & HTTP
+
+REST API ? 
+"Gaya arstektual perangkat lunak yang didalamnya mendefiniskan aturan-aturan untuk membuat web service" ==> sebuah style ngoding saja!
+
+API == REST API
+
+API bisa dianalogikan dengan aplikasi traveloka dan aplikasi e-Banking bisa transfer dibank lain dan bisa membayar wifi, membeli voucher
+API disatu sisi memudahkan dan di satu sisi bisa dijadikan bisnis
+API bisa dianalogikan di sebuah restoran
+REST API ==> Menu Makanan (aturanya)
+API ==> Penghubung atau Pelayan Restoran
+Request & Response ==> Customer
+Data yang dikirimkan diterima berupa JSON
+
+
+REST API 
+- REpresentasional State Tranfer
+- Gaya perancangan / Architectural Sytle
+- Stateless tanpa state ya
+- By. Roy Fielding, disertai PhD-nya
+- Hampi selalu menggunakan HTTP
+- Memungkinkan interaksi antar mesin
+
+
+
 
 Pertemuan #3 Apa itu JSON
 JSON (javaScript Object Notation) adalah sebuah file format standar yang menggunakan tulisan yang dapat dibaca oleh manusia untuk
